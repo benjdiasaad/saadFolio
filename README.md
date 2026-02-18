@@ -29,7 +29,8 @@ It’s powered by **Laravel 10** to make future improvements easy (admin, APIs, 
 
 ## 🌐 Demo
 
-- Live: `https://benjdiasaad.com/`
+[![Live Demo](https://img.shields.io/badge/Live-Visit%20Website-10b981?style=for-the-badge)](https://benjdiasaad.com/)
+
 ![Portfolio Preview](public/preview.png)
 ---
 ## ✨ Features
