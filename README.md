@@ -31,9 +31,6 @@
 
 - **Live**: `https://benjdiasaad.com/`
 
-> Ajoute ici un screenshot (optionnel)  
-> Exemple: `./public/preview.png`
-
 ---
 
 ## ✨ Features
