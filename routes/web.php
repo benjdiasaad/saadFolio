@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\TrackVisits;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 
@@ -14,4 +15,4 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::get('/', [IndexController::class, 'indexPage'])->name('HOME');
+Route::middleware([TrackVisits::class])->get('/', [IndexController::class, 'indexPage'])->name('HOME');
