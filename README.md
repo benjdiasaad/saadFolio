@@ -8,7 +8,6 @@
 
 <p align="center">
   <a href="#-demo">Demo</a> •
-  <a href="#-preview>Preview</a> •
   <a href="#-features">Features</a> •
   <a href="#-tech-stack">Tech Stack</a> •
 </p>
@@ -31,10 +30,6 @@ It’s powered by **Laravel 10** to make future improvements easy (admin, APIs, 
 ## 🌐 Demo
 
 - Live: `https://benjdiasaad.com/`
----
-
-## 🌐 Preview
-
 ![Portfolio Preview](public/preview.png)
 ---
 ## ✨ Features
