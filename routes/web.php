@@ -16,3 +16,8 @@ use App\Http\Controllers\IndexController;
 */
 
 Route::middleware([TrackVisits::class])->get('/', [IndexController::class, 'indexPage'])->name('HOME');
+
+Route::get('/sitemap.xml', function () {
+    return response()->view('sitemap')
+        ->header('Content-Type', 'text/xml');
+});

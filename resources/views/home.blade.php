@@ -2,11 +2,52 @@
 <html lang="fr">
 
 <head>
+
     <meta charset="utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/ico" href="{{ asset('assets/images/favicon.ico') }}">
-    <title>Saad Benjdia — Portfolio</title>
-    <meta name="description" content="Ingénieur Études & Développement — Laravel, Angular, Next.js, Spring, DevOps." />
+
+    <link rel="icon" type="image/ico" href="{{ asset('assets/images/favicon.ico') }}?v={{ config('app.version') }}">
+
+    <title>
+        Saad Benjdia | Laravel Developer in Morocco | Full Stack Engineer
+    </title>
+
+    <meta name="description"
+        content="Saad Benjdia est un développeur Laravel et ingénieur Full Stack basé à Casablanca, Maroc. Laravel Developer & Full Stack Engineer specialized in high-performance web applications, Angular and DevOps. Portfolio officiel et projets.">
+
+    <meta name="keywords"
+        content="Saad Benjdia, Développeur Laravel Maroc, Laravel Developer Morocco, PHP Developer Casablanca, Angular Developer, Ingénieur Full Stack, Full Stack Engineer Morocco, Portfolio développeur">
+        
+    <meta name="author" content="Saad Benjdia">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Saad Benjdia — Laravel & Full Stack Developer">
+
+    <meta property="og:description"
+        content="Portfolio officiel de Saad Benjdia, ingénieur spécialisé en Laravel, Angular et DevOps.">
+
+    <meta property="og:image" content="https://benjdiasaad.com/assets/images/preview.png">
+
+    <meta property="og:url" content="https://benjdiasaad.com/">
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Saad Benjdia — Laravel Developer">
+
+    <meta name="twitter:description" content="Ingénieur Laravel & Full Stack Developer basé à Casablanca.">
+
+    <meta name="twitter:image" content="https://benjdiasaad.com/assets/images/preview.png">
+
+    <link rel="alternate" hreflang="fr" href="https://benjdiasaad.com/" />
+    
+    <link rel="alternate" hreflang="en" href="https://benjdiasaad.com/" />
+
+    <link rel="canonical" href="https://benjdiasaad.com/" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,29 +55,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}?v={{ config('app.version') }}" />
 
-    <style>
-        .toast {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #111;
-            color: #fff;
-            padding: 14px 22px;
-            border-radius: 12px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            z-index: 9999;
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Saad Benjdia",
+        "url": "https://benjdiasaad.com",
+        "image": "https://benjdiasaad.com/assets/images/image.png",
+        "jobTitle": "Ingénieur Études et Développement",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "E-solution"
+        },
+        "sameAs": [
+            "https://github.com/benjdiasaad",
+            "https://www.linkedin.com/in/saadbenjdia/"
+        ]
         }
 
-        .toast.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    </script>
+
 </head>
 
 <body>
@@ -97,11 +137,14 @@
                     Disponible — Ingénieur Études & Développement
                 </p>
 
-                <h1>
-                    Je conçois des applications web
-                    <span class="gradient">performantes</span> &
-                    <span class="gradient">robustes</span>.
+                <h1 class="sr-only">
+                    Saad Benjdia — Laravel Developer & Full Stack Engineer in Morocco
                 </h1>
+
+                <h2 class="hero-title">
+                    Je conçois des applications web <span class="gradient">performantes</span> & <span
+                        class="gradient">robustes</span>.
+                </h2>
 
                 <p class="lead">
                     Ingénieur spécialisé en <b>PHP/Laravel</b>, <b>JavaScript</b> et
@@ -538,7 +581,7 @@
     <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
     <!-- Three.js (module) -->
-    <script type="module" src="{{ asset('assets/js/app.js') }}"></script>
+    <script type="module" src="{{ asset('assets/js/app.js') }}?v={{ config('app.version') }}"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
