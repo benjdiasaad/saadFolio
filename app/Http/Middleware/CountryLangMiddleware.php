@@ -72,8 +72,6 @@ class CountryLangMiddleware
 
         $defaultLang = $this->countryLangMap[$countryCode] ?? 'fr';
 
-        $defaultLang = 'en';
-        
         App::setLocale($defaultLang);
 
         Session::put('locale', $defaultLang);
