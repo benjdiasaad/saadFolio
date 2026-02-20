@@ -42,6 +42,10 @@ It’s powered by **Laravel 10** to make future improvements easy (admin, APIs, 
 - ✅ Contact form (mailto) *(can be upgraded to Laravel Mail)*
 - ✅ Easy to customize (Blade / config)
 - ✅ Ready for SEO basics (meta tags)
+- ✅ Automatic language detection (FR / EN)
+- ✅ Based on user geolocation (IP detection)
+- ✅ Visitor IP detection
+- ✅ City & Country detection via GeoIP
 
 ---
 

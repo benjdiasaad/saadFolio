@@ -80,6 +80,12 @@ return [
             'days' => 30,
         ],
 
+        'contact' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/contact.log'),
+            'level' => 'info',
+        ],
+
         /*
         |--------------------------------------------------------------------------
         | Slack

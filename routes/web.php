@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Middleware\TrackVisits;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 
@@ -15,9 +14,13 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::middleware([TrackVisits::class])->get('/', [IndexController::class, 'indexPage'])->name('HOME');
+Route::middleware(['web', 'country.lang', 'track.visits'])->get('/', [IndexController::class, 'indexPage'])->name('HOME');
 
 Route::get('/sitemap.xml', function () {
     return response()->view('sitemap')
         ->header('Content-Type', 'text/xml');
 });
+
+Route::post('/contact', [IndexController::class, 'postContact'])
+    ->middleware(['web', 'throttle:10,1'])
+    ->name('CONTACT');
