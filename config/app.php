@@ -138,7 +138,7 @@ return [
     |
     */
 
-    'version' => env('VERSION', '1.0.0'),
+    'version' => env('VERSION', '1.0.3'),
 
     'maintenance' => [
         'driver' => 'file',

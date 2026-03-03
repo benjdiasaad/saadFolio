@@ -96,8 +96,25 @@
             <a href="#experience">{{ __('portfolio.nav.experience') }}</a>
             <a href="#education">{{ __('portfolio.nav.education') }}</a>
             <a href="#certs">{{ __('portfolio.nav.certs') }}</a>
-            <a href="#contact" class="nav-cta">{{ __('portfolio.nav.contact') }}</a>
+            <a href="#projects">{{ __('portfolio.nav.projects') }}</a>
+            <a href="#contact">{{ __('portfolio.nav.contact') }}</a>
         </nav>
+
+        @php($locale = app()->getLocale())
+
+        <div class="lang-switch" role="navigation" aria-label="Language switch">
+            <a href="{{ route('lang.switch', 'fr') }}"
+            class="lang-btn {{ $locale === 'fr' ? 'active' : '' }}"
+            aria-current="{{ $locale === 'fr' ? 'page' : 'false' }}">
+                FR
+            </a>
+
+            <a href="{{ route('lang.switch', 'en') }}"
+            class="lang-btn {{ $locale === 'en' ? 'active' : '' }}"
+            aria-current="{{ $locale === 'en' ? 'page' : 'false' }}">
+                EN
+            </a>
+        </div>
 
         <button id="themeToggle" class="theme-btn" aria-label="Basculer le thème" title="Light/Dark">
             <span class="theme-icon" aria-hidden="true">☾</span>
@@ -327,6 +344,8 @@
                             <li>{{ __('portfolio.experience.esolution.points.p3') }}</li>
                             <li>{{ __('portfolio.experience.esolution.points.p4') }}</li>
                             <li>{{ __('portfolio.experience.esolution.points.p5') }}</li>
+                            <li>{{ __('portfolio.experience.esolution.points.p6') }}</li>
+                            <li>{{ __('portfolio.experience.esolution.points.p7') }}</li>
                         </ul>
 
                         <div class="tags small">
@@ -408,73 +427,56 @@
                         <p class="muted">{{ __('portfolio.certs.items.scrum.desc') }}</p>
                     </div>
                 </article>
+
+                <article class="cert-card reveal">
+                    <div class="cert-icon">◎</div>
+                    <div>
+                        <h4>{{ __('portfolio.certs.items.semrush.title') }}</h4>
+                        <p class="muted">{{ __('portfolio.certs.items.semrush.desc') }}</p>
+                    </div>
+                </article>
+
             </div>
         </section>
 
         <!-- PROJECTS (placeholder) -->
-        <!-- <section id="projects" class="section">
+        <section id="projects" class="section">
             <div class="section-head reveal">
-            <h3>Projets</h3>
-            <p>Ajoute ici 3 à 6 projets concrets (titre, stack, impact, lien).</p>
+                <h3>{{ __('portfolio.projects.title') }}</h3>
+                <p>{{ __('portfolio.projects.subtitle') }}</p>
             </div>
 
             <div class="project-grid">
-            <article class="project-card reveal">
+                <article class="project-card reveal">
                 <div class="project-top">
-                <h4>Plateforme e-sourcing</h4>
-                <span class="pill">Laravel • Angular</span>
+                    <h4>Laravel DB Monitor</h4>
+                    <span class="pill">Laravel • Performance • Monitoring</span>
                 </div>
-                <p class="muted">
-                Modules achats, workflows, intégrations API, qualité &
-                maintenance.
-                </p>
-                <div class="project-actions">
-                <a class="btn small" href="#contact">Demander une démo</a>
-                <button
-                    class="btn small ghost"
-                    data-toast="Projet interne (lien privé)"
-                >
-                    Lien
-                </button>
-                </div>
-            </article>
 
-            <article class="project-card reveal">
-                <div class="project-top">
-                <h4>Gestion des réclamations</h4>
-                <span class="pill">REST API • SQL</span>
-                </div>
                 <p class="muted">
-                Création/gestion, traçabilité, optimisation des requêtes.
+                    {{ __('portfolio.projects.dbmonitor.desc') }}
                 </p>
-                <div class="project-actions">
-                <a class="btn small" href="#contact">En savoir plus</a>
-                <button
-                    class="btn small ghost"
-                    data-toast="Ajoute ton lien GitHub"
-                >
-                    Lien
-                </button>
-                </div>
-            </article>
 
-            <article class="project-card reveal">
-                <div class="project-top">
-                <h4>Site web association</h4>
-                <span class="pill">Laravel • Bootstrap</span>
-                </div>
-                <p class="muted">
-                Analyse, réalisation, documentation, maintenance.
-                </p>
+                <ul class="list compact">
+                    <li>{{ __('portfolio.projects.dbmonitor.f1') }}</li>
+                    <li>{{ __('portfolio.projects.dbmonitor.f2') }}</li>
+                    <li>{{ __('portfolio.projects.dbmonitor.f3') }}</li>
+                    <li>{{ __('portfolio.projects.dbmonitor.f4') }}</li>
+                </ul>
+
                 <div class="project-actions">
-                <a class="btn small" href="#contact">Voir détails</a>
-                <button class="btn small ghost" data-toast="Ajoute ton lien">
-                    Lien
-                </button>
+                    <a class="btn small" target="_blank" rel="noopener"
+                    href="https://github.com/benjdiasaad/laravel-db-monitor">
+                    GitHub <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <button class="btn small ghost" data-toast="composer require benjdiasaad/laravel-db-monitor">
+                    Install
+                    </button>
                 </div>
-            </article>
+                </article>
             </div>
-        </section> -->
+            </section>
 
         <!-- CONTACT -->
         <section id="contact" class="section">
@@ -558,6 +560,51 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+
+        // NAV active link + CTA style depends on active section
+        const navLinks = document.querySelectorAll(".nav a[href^='#']");
+        const sections = [...document.querySelectorAll("section[id]")];
+
+        // Which section should be styled as CTA when active?
+        const ctaSectionId = "contact"; // you can change to "projects" etc.
+
+        function setActiveById(id){
+        navLinks.forEach(a => {
+            const isActive = a.getAttribute("href") === "#" + id;
+            a.classList.toggle("active", isActive);
+            a.classList.toggle("is-cta", isActive && id === ctaSectionId);
+        });
+        }
+
+        function getCurrentSectionId(){
+        const y = window.scrollY + 140; // offset for your fixed topbar
+        let current = sections[0]?.id;
+
+        for (const s of sections){
+            const top = s.offsetTop;
+            const bottom = top + s.offsetHeight;
+            if (y >= top && y < bottom) current = s.id;
+        }
+        return current;
+        }
+
+        // On scroll: update active
+        window.addEventListener("scroll", () => {
+        const id = getCurrentSectionId();
+        if (id) setActiveById(id);
+        });
+
+        // On click: update active immediately (smooth scroll happens after)
+        navLinks.forEach(a => {
+        a.addEventListener("click", () => {
+            const id = a.getAttribute("href").slice(1);
+            setActiveById(id);
+        });
+        });
+
+        // Init on load
+        const first = getCurrentSectionId();
+        if (first) setActiveById(first);
             const form = document.getElementById("contactForm");
             const toast = document.getElementById("toast");
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LocaleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,7 @@ Route::get('/sitemap.xml', function () {
 Route::post('/contact', [IndexController::class, 'postContact'])
     ->middleware(['web', 'throttle:10,1'])
     ->name('CONTACT');
+
+Route::get('/lang/{locale}', [LocaleController::class, 'switch'])
+    ->whereIn('locale', ['fr', 'en'])
+    ->name('lang.switch');

@@ -25,6 +25,7 @@ return [
         'education' => 'Formation',
         'certs' => 'Certificats',
         'contact' => 'Contact',
+        'projects' => 'Projets',
     ],
 
     'hero' => [
@@ -123,6 +124,8 @@ return [
                 'p3' => "Packaging et mise en production",
                 'p4' => "Analyse des besoins, rédaction/complétion des spécifications",
                 'p5' => "Partage des bonnes pratiques pour un travail d’équipe uniforme",
+                'p6' => 'Optimisation des performances (index, N+1, cache) sur des modules critiques.',
+                'p7' => 'Mise en place CI/CD et automatisation des déploiements (GitLab CI, Linux).',
             ],
         ],
         'rbc' => [
@@ -159,6 +162,18 @@ return [
             'mention' => 'Mention : Bien',
         ],
     ],
+
+    'projects' => [
+        'title' => 'Projets',
+        'subtitle' => 'Quelques projets open-source et réalisations.',
+        'dbmonitor' => [
+            'desc' => "Package Laravel pour surveiller la santé DB en temps réel et accélérer le diagnostic performance.",
+            'f1' => "Détection des requêtes lentes (threshold configurable).",
+            'f2' => "Détection automatique des N+1.",
+            'f3' => "Suggestions d’index manquants selon l’usage réel.",
+            'f4' => "Génération de migrations d’index + commandes db:report / db:fix.",
+        ],
+    ],
     
     'certs' => [
         'title' => 'Certificats',
@@ -167,6 +182,11 @@ return [
             'scrum' => [
                 'title' => 'Certificat Professionnel — SCRUM Foundation (CertiProf)',
                 'desc' => 'Approche agile, collaboration, livraison continue.',
+            ],
+            'semrush' => [
+                'title' => 'SEMrush SEO Toolkit Exam',
+                'desc' => 'Certification en SEO couvrant l’analyse de mots-clés, l’audit technique, l’optimisation on-page et la stratégie de visibilité digitale.',
+                'verify' => 'Vérifier le certificat',
             ],
         ],
     ],

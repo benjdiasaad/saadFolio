@@ -25,6 +25,7 @@ return [
         'education' => 'Education',
         'certs' => 'Certificates',
         'contact' => 'Contact',
+        'projects' => 'Projects',
     ],
 
     'hero' => [
@@ -121,6 +122,8 @@ return [
                 'p3' => 'Packaging and production releases',
                 'p4' => 'Requirements analysis, writing/completing specifications',
                 'p5' => 'Sharing best practices for consistent teamwork',
+                'p6' => 'Performance optimization (indexes, N+1, caching) on critical modules.',
+                'p7' => 'Implementation of CI/CD pipelines and deployment automation (GitLab CI, Linux).',
             ],
         ],
         'rbc' => [
@@ -157,6 +160,18 @@ return [
             'mention' => 'Grade: Good',
         ],
     ],
+
+    'projects' => [
+        'title' => 'Projects',
+        'subtitle' => 'A few open-source projects and selected work.',
+        'dbmonitor' => [
+            'desc' => "A Laravel package that monitors database health in real time and speeds up performance diagnostics.",
+            'f1' => "Detects slow queries (configurable threshold).",
+            'f2' => "Automatically detects N+1 patterns.",
+            'f3' => "Suggests missing indexes based on real usage.",
+            'f4' => "Generates index migrations + provides db:report / db:fix commands.",
+        ],
+    ],
     
     'certs' => [
         'title' => 'Certificates',
@@ -165,6 +180,11 @@ return [
             'scrum' => [
                 'title' => 'Professional Certificate — SCRUM Foundation (CertiProf)',
                 'desc' => 'Agile mindset, collaboration, continuous delivery.',
+            ],
+            'semrush' => [
+                'title' => 'SEMrush SEO Toolkit Exam',
+                'desc' => 'SEO certification covering keyword research, technical audits, on-page optimization, and digital visibility strategy.',
+                'verify' => 'Verify certificate',
             ],
         ],
     ],

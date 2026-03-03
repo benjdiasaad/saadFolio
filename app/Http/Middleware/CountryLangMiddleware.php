@@ -61,9 +61,16 @@ class CountryLangMiddleware
 
     public function handle($request, Closure $next)
     {
+        $sessionLocale = Session::get('locale');
+
+        if (in_array($sessionLocale, ['fr', 'en'])) {
+
+            App::setLocale($sessionLocale);
+            return $next($request);
+        }
 
         $ip = $request->header('X-Forwarded-For') ?? $request->ip();
-        
+
         $ip = trim(explode(',', (string) $ip)[0]);
 
         $position = Location::get($ip);
@@ -73,7 +80,7 @@ class CountryLangMiddleware
         $defaultLang = $this->countryLangMap[$countryCode] ?? 'fr';
 
         App::setLocale($defaultLang);
-
+        
         Session::put('locale', $defaultLang);
 
         return $next($request);
