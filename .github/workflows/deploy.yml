@@ -29,5 +29,3 @@ jobs:
           script: |
             cd /home/u795687298/domains/benjdiasaad.com
             git pull origin main
-            npm install --production
-            pm2 restart all   # or: systemctl reload nginx
