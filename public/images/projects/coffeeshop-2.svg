@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" font-family="Inter, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="cs2bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#120b08"/>
+      <stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+    <linearGradient id="cs2acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c98a52"/>
+      <stop offset="1" stop-color="#7850ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#cs2bg)"/>
+  <rect x="40" y="36" width="1200" height="728" rx="16" fill="#0b0d14" stroke="rgba(255,255,255,.12)"/>
+  <rect x="40" y="36" width="1200" height="52" rx="16" fill="#0f1220"/>
+  <circle cx="72" cy="62" r="6" fill="#ff5f56"/><circle cx="94" cy="62" r="6" fill="#ffbd2e"/><circle cx="116" cy="62" r="6" fill="#27c93f"/>
+  <rect x="160" y="50" width="900" height="24" rx="12" fill="rgba(255,255,255,.06)"/>
+  <text x="180" y="66" fill="rgba(255,255,255,.5)" font-size="13">coffeeshop.app/checkout</text>
+  <text x="72" y="132" fill="#fff" font-size="26" font-weight="800">Your cart</text>
+  <text x="72" y="160" fill="rgba(255,255,255,.6)" font-size="14">3 items · ready to checkout</text>
+  <!-- cart list -->
+  <g>
+    <rect x="72" y="188" width="720" height="96" rx="14" fill="#11141d" stroke="rgba(255,255,255,.1)"/>
+    <rect x="88" y="204" width="64" height="64" rx="10" fill="rgba(201,138,82,.18)"/><text x="104" y="248" font-size="30">☕</text>
+    <text x="172" y="230" fill="#fff" font-size="16" font-weight="600">Iced Latte</text>
+    <text x="172" y="256" fill="rgba(255,255,255,.55)" font-size="13">Large · Oat milk</text>
+    <text x="700" y="245" fill="url(#cs2acc)" font-size="16" font-weight="700">$4.50</text>
+    <rect x="600" y="222" width="72" height="30" rx="15" fill="rgba(255,255,255,.06)"/><text x="612" y="242" fill="#fff" font-size="13">− 1 +</text>
+  </g>
+  <g>
+    <rect x="72" y="300" width="720" height="96" rx="14" fill="#11141d" stroke="rgba(255,255,255,.1)"/>
+    <rect x="88" y="316" width="64" height="64" rx="10" fill="rgba(201,138,82,.18)"/><text x="104" y="360" font-size="30">🍰</text>
+    <text x="172" y="342" fill="#fff" font-size="16" font-weight="600">Cheesecake</text>
+    <text x="172" y="368" fill="rgba(255,255,255,.55)" font-size="13">Slice</text>
+    <text x="700" y="357" fill="url(#cs2acc)" font-size="16" font-weight="700">$5.25</text>
+    <rect x="600" y="334" width="72" height="30" rx="15" fill="rgba(255,255,255,.06)"/><text x="612" y="354" fill="#fff" font-size="13">− 1 +</text>
+  </g>
+  <g>
+    <rect x="72" y="412" width="720" height="96" rx="14" fill="#11141d" stroke="rgba(255,255,255,.1)"/>
+    <rect x="88" y="428" width="64" height="64" rx="10" fill="rgba(201,138,82,.18)"/><text x="104" y="472" font-size="30">🧁</text>
+    <text x="172" y="454" fill="#fff" font-size="16" font-weight="600">Muffin</text>
+    <text x="172" y="480" fill="rgba(255,255,255,.55)" font-size="13">Blueberry</text>
+    <text x="700" y="469" fill="url(#cs2acc)" font-size="16" font-weight="700">$2.75</text>
+    <rect x="600" y="446" width="72" height="30" rx="15" fill="rgba(255,255,255,.06)"/><text x="612" y="466" fill="#fff" font-size="13">− 1 +</text>
+  </g>
+  <!-- summary -->
+  <rect x="824" y="188" width="384" height="320" rx="16" fill="#0f1220" stroke="rgba(255,255,255,.1)"/>
+  <text x="852" y="228" fill="#fff" font-size="18" font-weight="700">Order summary</text>
+  <line x1="852" y1="246" x2="1180" y2="246" stroke="rgba(255,255,255,.1)"/>
+  <text x="852" y="284" fill="rgba(255,255,255,.6)" font-size="14">Subtotal</text><text x="1140" y="284" fill="#fff" font-size="14" text-anchor="end">$12.50</text>
+  <text x="852" y="316" fill="rgba(255,255,255,.6)" font-size="14">Delivery</text><text x="1140" y="316" fill="#fff" font-size="14" text-anchor="end">$2.00</text>
+  <text x="852" y="348" fill="rgba(255,255,255,.6)" font-size="14">Tax</text><text x="1140" y="348" fill="#fff" font-size="14" text-anchor="end">$1.16</text>
+  <line x1="852" y1="368" x2="1180" y2="368" stroke="rgba(255,255,255,.1)"/>
+  <text x="852" y="404" fill="#fff" font-size="17" font-weight="700">Total</text><text x="1140" y="404" fill="url(#cs2acc)" font-size="18" font-weight="800" text-anchor="end">$15.66</text>
+  <rect x="852" y="436" width="328" height="52" rx="26" fill="url(#cs2acc)"/>
+  <text x="1016" y="468" fill="#0b0d14" font-size="16" font-weight="700" text-anchor="middle">Checkout →</text>
+  <!-- reviews -->
+  <text x="72" y="566" fill="#fff" font-size="18" font-weight="700">★★★★★ Loved by customers</text>
+  <rect x="72" y="586" width="366" height="130" rx="14" fill="#11141d" stroke="rgba(255,255,255,.1)"/>
+  <text x="92" y="620" fill="rgba(255,255,255,.8)" font-size="13">“Best latte in town, super fast</text>
+  <text x="92" y="642" fill="rgba(255,255,255,.8)" font-size="13">delivery every single time.”</text>
+  <text x="92" y="690" fill="url(#cs2acc)" font-size="13" font-weight="700">— Amine R.</text>
+  <rect x="458" y="586" width="366" height="130" rx="14" fill="#11141d" stroke="rgba(255,255,255,.1)"/>
+  <text x="478" y="620" fill="rgba(255,255,255,.8)" font-size="13">“Clean UI, easy checkout,</text>
+  <text x="478" y="642" fill="rgba(255,255,255,.8)" font-size="13">great loyalty rewards.”</text>
+  <text x="478" y="690" fill="url(#cs2acc)" font-size="13" font-weight="700">— Salma K.</text>
+  <rect x="844" y="586" width="364" height="130" rx="14" fill="#11141d" stroke="rgba(255,255,255,.1)"/>
+  <text x="864" y="620" fill="rgba(255,255,255,.8)" font-size="13">“The mobile experience is</text>
+  <text x="864" y="642" fill="rgba(255,255,255,.8)" font-size="13">smooth and snappy.”</text>
+  <text x="864" y="690" fill="url(#cs2acc)" font-size="13" font-weight="700">— Youssef M.</text>
+</svg>

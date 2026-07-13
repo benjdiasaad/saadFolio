@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" font-family="Inter, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="rs2bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0d14"/>
+      <stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+    <linearGradient id="rs2acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7850ff"/>
+      <stop offset="1" stop-color="#00d2ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#rs2bg)"/>
+  <rect x="40" y="36" width="1200" height="728" rx="16" fill="#0b0d14" stroke="rgba(255,255,255,.12)"/>
+  <rect x="40" y="36" width="1200" height="52" rx="16" fill="#0f1220"/>
+  <circle cx="72" cy="62" r="6" fill="#ff5f56"/><circle cx="94" cy="62" r="6" fill="#ffbd2e"/><circle cx="116" cy="62" r="6" fill="#27c93f"/>
+  <rect x="160" y="50" width="900" height="24" rx="12" fill="rgba(255,255,255,.06)"/>
+  <text x="180" y="66" fill="rgba(255,255,255,.5)" font-size="13">restaurant.app/menu</text>
+  <!-- sidebar -->
+  <rect x="40" y="88" width="230" height="676" fill="#0d101a"/>
+  <text x="72" y="132" fill="#fff" font-size="19" font-weight="800">🍽 Bistro Admin</text>
+  <text x="76" y="185" fill="rgba(255,255,255,.6)" font-size="14">▦  Dashboard</text>
+  <text x="76" y="233" fill="rgba(255,255,255,.6)" font-size="14">🧾  Orders</text>
+  <rect x="56" y="256" width="198" height="40" rx="10" fill="rgba(120,80,255,.18)"/>
+  <text x="76" y="281" fill="#fff" font-size="14" font-weight="600">🍔  Menu</text>
+  <text x="76" y="325" fill="rgba(255,255,255,.6)" font-size="14">🪑  Tables</text>
+  <text x="76" y="369" fill="rgba(255,255,255,.6)" font-size="14">👥  Staff</text>
+  <text x="76" y="413" fill="rgba(255,255,255,.6)" font-size="14">📊  Reports</text>
+  <!-- header + add btn -->
+  <text x="300" y="132" fill="#fff" font-size="24" font-weight="800">Menu items</text>
+  <text x="300" y="158" fill="rgba(255,255,255,.55)" font-size="13">42 dishes · 6 categories</text>
+  <rect x="1024" y="112" width="176" height="44" rx="22" fill="url(#rs2acc)"/>
+  <text x="1112" y="140" fill="#0b0d14" font-size="14" font-weight="700" text-anchor="middle">+ Add dish</text>
+  <!-- table header -->
+  <rect x="300" y="188" width="900" height="46" rx="10" fill="#0f1220"/>
+  <g fill="rgba(255,255,255,.5)" font-size="13" font-weight="600">
+    <text x="324" y="216">DISH</text>
+    <text x="640" y="216">CATEGORY</text>
+    <text x="860" y="216">PRICE</text>
+    <text x="980" y="216">STATUS</text>
+    <text x="1120" y="216">ACTIONS</text>
+  </g>
+  <!-- rows -->
+  <g font-size="14">
+    <rect x="300" y="242" width="900" height="60" rx="8" fill="#11141d"/>
+    <text x="324" y="278" fill="#fff">🍝 Pasta Alfredo</text>
+    <text x="640" y="278" fill="rgba(255,255,255,.7)">Mains</text>
+    <text x="860" y="278" fill="#fff">$12.00</text>
+    <rect x="980" y="262" width="76" height="24" rx="12" fill="rgba(39,201,63,.18)"/><text x="994" y="279" fill="#27c93f" font-size="12">Active</text>
+    <text x="1120" y="278" fill="rgba(0,210,255,.9)">✎  🗑</text>
+
+    <rect x="300" y="310" width="900" height="60" rx="8" fill="#0e111a"/>
+    <text x="324" y="346" fill="#fff">🍕 Margherita Pizza</text>
+    <text x="640" y="346" fill="rgba(255,255,255,.7)">Mains</text>
+    <text x="860" y="346" fill="#fff">$10.50</text>
+    <rect x="980" y="330" width="76" height="24" rx="12" fill="rgba(39,201,63,.18)"/><text x="994" y="347" fill="#27c93f" font-size="12">Active</text>
+    <text x="1120" y="346" fill="rgba(0,210,255,.9)">✎  🗑</text>
+
+    <rect x="300" y="378" width="900" height="60" rx="8" fill="#11141d"/>
+    <text x="324" y="414" fill="#fff">🥗 Caesar Salad</text>
+    <text x="640" y="414" fill="rgba(255,255,255,.7)">Starters</text>
+    <text x="860" y="414" fill="#fff">$7.00</text>
+    <rect x="980" y="398" width="76" height="24" rx="12" fill="rgba(39,201,63,.18)"/><text x="994" y="415" fill="#27c93f" font-size="12">Active</text>
+    <text x="1120" y="414" fill="rgba(0,210,255,.9)">✎  🗑</text>
+
+    <rect x="300" y="446" width="900" height="60" rx="8" fill="#0e111a"/>
+    <text x="324" y="482" fill="#fff">🍔 Classic Burger</text>
+    <text x="640" y="482" fill="rgba(255,255,255,.7)">Mains</text>
+    <text x="860" y="482" fill="#fff">$9.50</text>
+    <rect x="980" y="466" width="86" height="24" rx="12" fill="rgba(255,189,46,.18)"/><text x="994" y="483" fill="#ffbd2e" font-size="12">Sold out</text>
+    <text x="1120" y="482" fill="rgba(0,210,255,.9)">✎  🗑</text>
+
+    <rect x="300" y="514" width="900" height="60" rx="8" fill="#11141d"/>
+    <text x="324" y="550" fill="#fff">🍰 Tiramisu</text>
+    <text x="640" y="550" fill="rgba(255,255,255,.7)">Desserts</text>
+    <text x="860" y="550" fill="#fff">$5.75</text>
+    <rect x="980" y="534" width="76" height="24" rx="12" fill="rgba(39,201,63,.18)"/><text x="994" y="551" fill="#27c93f" font-size="12">Active</text>
+    <text x="1120" y="550" fill="rgba(0,210,255,.9)">✎  🗑</text>
+
+    <rect x="300" y="582" width="900" height="60" rx="8" fill="#0e111a"/>
+    <text x="324" y="618" fill="#fff">🥤 Fresh Lemonade</text>
+    <text x="640" y="618" fill="rgba(255,255,255,.7)">Drinks</text>
+    <text x="860" y="618" fill="#fff">$3.25</text>
+    <rect x="980" y="602" width="76" height="24" rx="12" fill="rgba(39,201,63,.18)"/><text x="994" y="619" fill="#27c93f" font-size="12">Active</text>
+    <text x="1120" y="618" fill="rgba(0,210,255,.9)">✎  🗑</text>
+  </g>
+  <!-- pagination -->
+  <rect x="1024" y="668" width="36" height="36" rx="8" fill="rgba(120,80,255,.25)"/><text x="1038" y="691" fill="#fff" font-size="14">1</text>
+  <rect x="1068" y="668" width="36" height="36" rx="8" fill="rgba(255,255,255,.06)"/><text x="1082" y="691" fill="rgba(255,255,255,.7)" font-size="14">2</text>
+  <rect x="1112" y="668" width="36" height="36" rx="8" fill="rgba(255,255,255,.06)"/><text x="1126" y="691" fill="rgba(255,255,255,.7)" font-size="14">3</text>
+  <rect x="1156" y="668" width="44" height="36" rx="8" fill="rgba(255,255,255,.06)"/><text x="1168" y="691" fill="rgba(255,255,255,.7)" font-size="14">›</text>
+</svg>

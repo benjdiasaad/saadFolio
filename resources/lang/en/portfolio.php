@@ -164,12 +164,27 @@ return [
     'projects' => [
         'title' => 'Projects',
         'subtitle' => 'A few open-source projects and selected work.',
+        'preview' => 'Preview',
         'dbmonitor' => [
             'desc' => "A Laravel package that monitors database health in real time and speeds up performance diagnostics.",
             'f1' => "Detects slow queries (configurable threshold).",
             'f2' => "Automatically detects N+1 patterns.",
             'f3' => "Suggests missing indexes based on real usage.",
             'f4' => "Generates index migrations + provides db:report / db:fix commands.",
+        ],
+        'coffeeshop' => [
+            'desc' => "A full-stack e-commerce coffee shop platform with a Laravel API backend and an Angular single-page frontend.",
+            'f1' => "Angular SPA with Bootstrap 5 responsive UI.",
+            'f2' => "Laravel + Backpack admin for products and orders.",
+            'f3' => "Product menu, cart and checkout flow.",
+            'f4' => "MySQL-backed catalog with reviews and contact form.",
+        ],
+        'restaurant' => [
+            'desc' => "A Laravel restaurant management system for handling day-to-day restaurant operations.",
+            'f1' => "Authentication and user management via Laravel Jetstream.",
+            'f2' => "Admin dashboard for restaurant operations.",
+            'f3' => "MySQL-driven data with Blade templating.",
+            'f4' => "Responsive Bootstrap 4 interface.",
         ],
     ],
     

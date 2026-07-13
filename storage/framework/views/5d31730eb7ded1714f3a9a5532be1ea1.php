@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="<?php echo e(app()->getLocale()); ?>">
 
 <head>
 
@@ -7,35 +7,35 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/ico" href="{{ asset('assets/images/favicon.ico') }}?v={{ config('app.version') }}">
+    <link rel="icon" type="image/ico" href="<?php echo e(asset('assets/images/favicon.ico')); ?>?v=<?php echo e(config('app.version')); ?>">
 
-    <title>{{ __('portfolio.meta.title') }}</title>
+    <title><?php echo e(__('portfolio.meta.title')); ?></title>
 
-    <meta name="description" content="{{ __('portfolio.meta.description') }}">
+    <meta name="description" content="<?php echo e(__('portfolio.meta.description')); ?>">
 
-    <meta name="keywords" content="{{ __('portfolio.meta.keywords') }}">
+    <meta name="keywords" content="<?php echo e(__('portfolio.meta.keywords')); ?>">
 
-    <meta name="author" content="{{ __('portfolio.meta.author') }}">
+    <meta name="author" content="<?php echo e(__('portfolio.meta.author')); ?>">
 
-    <meta name="robots" content="{{ __('portfolio.meta.robots') }}">
+    <meta name="robots" content="<?php echo e(__('portfolio.meta.robots')); ?>">
 
-    <meta property="og:title" content="{{ __('portfolio.meta.og_title') }}">
+    <meta property="og:title" content="<?php echo e(__('portfolio.meta.og_title')); ?>">
 
-    <meta property="og:description" content="{{ __('portfolio.meta.og_description') }}">
+    <meta property="og:description" content="<?php echo e(__('portfolio.meta.og_description')); ?>">
 
-    <meta property="og:image" content="{{ __('portfolio.meta.og_image') }}">
+    <meta property="og:image" content="<?php echo e(__('portfolio.meta.og_image')); ?>">
 
-    <meta property="og:url" content="{{ __('portfolio.meta.og_url') }}">
+    <meta property="og:url" content="<?php echo e(__('portfolio.meta.og_url')); ?>">
 
-    <meta property="og:type" content="{{ __('portfolio.meta.og_type') }}">
+    <meta property="og:type" content="<?php echo e(__('portfolio.meta.og_type')); ?>">
 
-    <meta name="twitter:card" content="{{ __('portfolio.meta.twitter_card') }}">
+    <meta name="twitter:card" content="<?php echo e(__('portfolio.meta.twitter_card')); ?>">
 
-    <meta name="twitter:title" content="{{ __('portfolio.meta.twitter_title') }}">
+    <meta name="twitter:title" content="<?php echo e(__('portfolio.meta.twitter_title')); ?>">
 
-    <meta name="twitter:description" content="{{ __('portfolio.meta.twitter_description') }}">
+    <meta name="twitter:description" content="<?php echo e(__('portfolio.meta.twitter_description')); ?>">
 
-    <meta name="twitter:image" content="{{ __('portfolio.meta.twitter_image') }}">
+    <meta name="twitter:image" content="<?php echo e(__('portfolio.meta.twitter_image')); ?>">
 
     <link rel="alternate" hreflang="fr" href="https://benjdiasaad.com/" />
 
@@ -50,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}?v={{ config('app.version') }}" />
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/styles.css')); ?>?v=<?php echo e(config('app.version')); ?>" />
 
     <script type="application/ld+json">
         {
@@ -91,27 +91,27 @@
         </a>
 
         <nav class="nav">
-            <a href="#about">{{ __('portfolio.nav.about') }}</a>
-            <a href="#skills">{{ __('portfolio.nav.skills') }}</a>
-            <a href="#experience">{{ __('portfolio.nav.experience') }}</a>
-            <a href="#education">{{ __('portfolio.nav.education') }}</a>
-            <a href="#certs">{{ __('portfolio.nav.certs') }}</a>
-            <a href="#projects">{{ __('portfolio.nav.projects') }}</a>
-            <a href="#contact">{{ __('portfolio.nav.contact') }}</a>
+            <a href="#about"><?php echo e(__('portfolio.nav.about')); ?></a>
+            <a href="#skills"><?php echo e(__('portfolio.nav.skills')); ?></a>
+            <a href="#experience"><?php echo e(__('portfolio.nav.experience')); ?></a>
+            <a href="#education"><?php echo e(__('portfolio.nav.education')); ?></a>
+            <a href="#certs"><?php echo e(__('portfolio.nav.certs')); ?></a>
+            <a href="#projects"><?php echo e(__('portfolio.nav.projects')); ?></a>
+            <a href="#contact"><?php echo e(__('portfolio.nav.contact')); ?></a>
         </nav>
 
-        @php($locale = app()->getLocale())
+        <?php ($locale = app()->getLocale()); ?>
 
         <div class="lang-switch" role="navigation" aria-label="Language switch">
-            <a href="{{ route('lang.switch', 'fr') }}"
-            class="lang-btn {{ $locale === 'fr' ? 'active' : '' }}"
-            aria-current="{{ $locale === 'fr' ? 'page' : 'false' }}">
+            <a href="<?php echo e(route('lang.switch', 'fr')); ?>"
+            class="lang-btn <?php echo e($locale === 'fr' ? 'active' : ''); ?>"
+            aria-current="<?php echo e($locale === 'fr' ? 'page' : 'false'); ?>">
                 FR
             </a>
 
-            <a href="{{ route('lang.switch', 'en') }}"
-            class="lang-btn {{ $locale === 'en' ? 'active' : '' }}"
-            aria-current="{{ $locale === 'en' ? 'page' : 'false' }}">
+            <a href="<?php echo e(route('lang.switch', 'en')); ?>"
+            class="lang-btn <?php echo e($locale === 'en' ? 'active' : ''); ?>"
+            aria-current="<?php echo e($locale === 'en' ? 'page' : 'false'); ?>">
                 EN
             </a>
         </div>
@@ -128,12 +128,12 @@
     <!-- Mobile menu -->
     <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
         <div class="mobile-menu-inner">
-            <a href="#about">{{ __('portfolio.nav.about') }}</a>
-            <a href="#skills">{{ __('portfolio.nav.skills') }}</a>
-            <a href="#experience">{{ __('portfolio.nav.experience') }}</a>
-            <a href="#education">{{ __('portfolio.nav.education') }}</a>
-            <a href="#certs">{{ __('portfolio.nav.certs') }}</a>
-            <a href="#contact" class="nav-cta">{{ __('portfolio.nav.contact') }}</a>
+            <a href="#about"><?php echo e(__('portfolio.nav.about')); ?></a>
+            <a href="#skills"><?php echo e(__('portfolio.nav.skills')); ?></a>
+            <a href="#experience"><?php echo e(__('portfolio.nav.experience')); ?></a>
+            <a href="#education"><?php echo e(__('portfolio.nav.education')); ?></a>
+            <a href="#certs"><?php echo e(__('portfolio.nav.certs')); ?></a>
+            <a href="#contact" class="nav-cta"><?php echo e(__('portfolio.nav.contact')); ?></a>
             <a class="ghost" href="mailto:benjdiasaad97@gmail.com">benjdiasaad97@gmail.com
             </a>
             <a class="ghost" target="_blank" rel="noopener" href="https://github.com/benjdiasaad">GitHub</a>
@@ -146,32 +146,36 @@
             <div class="hero-left reveal">
                 <p class="badge">
                     <span class="ping" aria-hidden="true"></span>
-                    {{ __('portfolio.hero.available') }}
+                    <?php echo e(__('portfolio.hero.available')); ?>
+
                 </p>
 
                 <h1 class="sr-only">
-                    {{ __('portfolio.hero.h1') }}
+                    <?php echo e(__('portfolio.hero.h1')); ?>
+
                 </h1>
 
                 <h2 class="hero-title">
-                    {!! __('portfolio.hero.title', [
+                    <?php echo __('portfolio.hero.title', [
                     'performantes' => '<span class="gradient">'.__('portfolio.hero.performant').'</span>',
                     'robustes' => '<span class="gradient">'.__('portfolio.hero.robust').'</span>',
-                    ]) !!}
+                    ]); ?>
+
                 </h2>
 
                 <p class="lead">
-                    {!! __('portfolio.hero.lead', [
+                    <?php echo __('portfolio.hero.lead', [
                     'php' => '<b>PHP/Laravel</b>',
                     'js' => '<b>JavaScript</b>',
                     'angular' => '<b>Angular</b>',
                     'devops' => '<b>DevOps</b>',
-                    ]) !!}
+                    ]); ?>
+
                 </p>
 
                 <div class="hero-actions">
-                    <a class="btn primary" href="#contact">{{ __('portfolio.hero.cta_contact') }}</a>
-                    <a class="btn" href="#experience">{{ __('portfolio.hero.cta_path') }}</a>
+                    <a class="btn primary" href="#contact"><?php echo e(__('portfolio.hero.cta_contact')); ?></a>
+                    <a class="btn" href="#experience"><?php echo e(__('portfolio.hero.cta_path')); ?></a>
                 </div>
 
                 <div class="chips" aria-label="Technos principales">
@@ -190,14 +194,14 @@
                 <div class="glass-card">
                     <div class="card-top">
                         <div class="avatar avatar-img">
-                            <img src="{{ asset('assets/images/image.png') }}"
-                                 alt="{{ __('portfolio.profile.photo_alt') }}"
+                            <img src="<?php echo e(asset('assets/images/image.png')); ?>"
+                                 alt="<?php echo e(__('portfolio.profile.photo_alt')); ?>"
                                  loading="lazy" />
                         </div>
                         
                         <div>
                             <h2>Saad Benjdia</h2>
-                            <p>{{ __('portfolio.profile.title') }}</p>
+                            <p><?php echo e(__('portfolio.profile.title')); ?></p>
                         </div>
                     </div>
 
@@ -241,88 +245,88 @@
         <!-- ABOUT -->
         <section id="about" class="section">
             <div class="section-head reveal">
-                <h3>{{ __('portfolio.about.title') }}</h3>
-                <p>{!! __('portfolio.about.text') !!}</p>
+                <h3><?php echo e(__('portfolio.about.title')); ?></h3>
+                <p><?php echo __('portfolio.about.text'); ?></p>
             </div>
 
             <div class="grid-2">
                 <div class="panel reveal">
-                    <h4>{{ __('portfolio.about.what_i_bring') }}</h4>
+                    <h4><?php echo e(__('portfolio.about.what_i_bring')); ?></h4>
                     <ul class="list">
-                        <li>{!! __('portfolio.about.bring_1') !!}</li>
-                        <li>{!! __('portfolio.about.bring_2') !!}</li>
-                        <li>{!! __('portfolio.about.bring_3') !!}</li>
-                        <li>{!! __('portfolio.about.bring_4') !!}</li>
+                        <li><?php echo __('portfolio.about.bring_1'); ?></li>
+                        <li><?php echo __('portfolio.about.bring_2'); ?></li>
+                        <li><?php echo __('portfolio.about.bring_3'); ?></li>
+                        <li><?php echo __('portfolio.about.bring_4'); ?></li>
                     </ul>
                 </div>
 
                 <div class="panel reveal">
-                    <h4>{{ __('portfolio.about.soft_skills') }}</h4>
+                    <h4><?php echo e(__('portfolio.about.soft_skills')); ?></h4>
 
                     <div class="skills-bubbles">
-                        <span class="bubble">{{ __('portfolio.about.soft.skill_team') }}</span>
-                        <span class="bubble">{{ __('portfolio.about.soft.rigorous') }}</span>
-                        <span class="bubble">{{ __('portfolio.about.soft.autonomous') }}</span>
-                        <span class="bubble">{{ __('portfolio.about.soft.dynamic') }}</span>
+                        <span class="bubble"><?php echo e(__('portfolio.about.soft.skill_team')); ?></span>
+                        <span class="bubble"><?php echo e(__('portfolio.about.soft.rigorous')); ?></span>
+                        <span class="bubble"><?php echo e(__('portfolio.about.soft.autonomous')); ?></span>
+                        <span class="bubble"><?php echo e(__('portfolio.about.soft.dynamic')); ?></span>
                     </div>
 
                     <div class="callout">
-                        <p class="callout-title">{{ __('portfolio.about.goal_title') }}</p>
-                        <p>{{ __('portfolio.about.goal_text') }}</p>
+                        <p class="callout-title"><?php echo e(__('portfolio.about.goal_title')); ?></p>
+                        <p><?php echo e(__('portfolio.about.goal_text')); ?></p>
                     </div>
                 </div>
             </div>
         </section>
 
-        {{-- SKILLS --}}
+        
         <section id="skills" class="section">
             <div class="section-head reveal">
-                <h3>{{ __('portfolio.skills.title') }}</h3>
+                <h3><?php echo e(__('portfolio.skills.title')); ?></h3>
             </div>
 
             <div class="cards">
                 <article class="skill-card reveal">
-                    <h4>{{ __('portfolio.skills.backend.title') }}</h4>
+                    <h4><?php echo e(__('portfolio.skills.backend.title')); ?></h4>
                     <div class="tags">
                         <span>PHP</span><span>Laravel</span><span>Symfony</span><span>REST
                             API</span><span>Java</span><span>Spring</span>
                         <span>Python</span>
                     </div>
-                    <p class="muted">{{ __('portfolio.skills.backend.desc') }}</p>
+                    <p class="muted"><?php echo e(__('portfolio.skills.backend.desc')); ?></p>
                 </article>
 
                 <article class="skill-card reveal">
-                    <h4>{{ __('portfolio.skills.frontend.title') }}</h4>
+                    <h4><?php echo e(__('portfolio.skills.frontend.title')); ?></h4>
                     <div class="tags">
                         <span>JavaScript</span><span>Angular</span><span>Next.js</span><span>Bootstrap</span>
                         <span>Tailwind CSS</span>
                         <span>Vue.js</span>
                     </div>
-                    <p class="muted">{{ __('portfolio.skills.frontend.desc') }}</p>
+                    <p class="muted"><?php echo e(__('portfolio.skills.frontend.desc')); ?></p>
                 </article>
 
                 <article class="skill-card reveal">
-                    <h4>{{ __('portfolio.skills.data.title') }}</h4>
+                    <h4><?php echo e(__('portfolio.skills.data.title')); ?></h4>
                     <div class="tags">
                         <span>SQL</span><span>SQL Server</span><span>MySQL</span><span>Oracle 19c</span>
                     </div>
-                    <p class="muted">{{ __('portfolio.skills.data.desc') }}</p>
+                    <p class="muted"><?php echo e(__('portfolio.skills.data.desc')); ?></p>
                 </article>
 
                 <article class="skill-card reveal">
-                    <h4>{{ __('portfolio.skills.devops.title') }}</h4>
+                    <h4><?php echo e(__('portfolio.skills.devops.title')); ?></h4>
                     <div class="tags">
                         <span>Linux</span><span>GitHub</span><span>CI/CD</span><span>PHPStan</span>
                     </div>
-                    <p class="muted">{{ __('portfolio.skills.devops.desc') }}</p>
+                    <p class="muted"><?php echo e(__('portfolio.skills.devops.desc')); ?></p>
                 </article>
             </div>
         </section>
 
-        {{-- EXPERIENCE --}}
+        
         <section id="experience" class="section">
             <div class="section-head reveal">
-                <h3>{{ __('portfolio.experience.title') }}</h3>
+                <h3><?php echo e(__('portfolio.experience.title')); ?></h3>
             </div>
 
             <div class="timeline">
@@ -330,22 +334,22 @@
                     <div class="time-dot"></div>
                     <div class="time-content">
                         <div class="time-top">
-                            <h4>{{ __('portfolio.experience.esolution.company') }}</h4>
-                            <span class="pill">{{ __('portfolio.experience.esolution.period') }}</span>
+                            <h4><?php echo e(__('portfolio.experience.esolution.company')); ?></h4>
+                            <span class="pill"><?php echo e(__('portfolio.experience.esolution.period')); ?></span>
                         </div>
 
                         <p class="muted">
-                            <b>{{ __('portfolio.experience.esolution.role') }}</b>
+                            <b><?php echo e(__('portfolio.experience.esolution.role')); ?></b>
                         </p>
 
                         <ul class="list compact">
-                            <li>{{ __('portfolio.experience.esolution.points.p1') }}</li>
-                            <li>{!! __('portfolio.experience.esolution.points.p2') !!}</li>
-                            <li>{{ __('portfolio.experience.esolution.points.p3') }}</li>
-                            <li>{{ __('portfolio.experience.esolution.points.p4') }}</li>
-                            <li>{{ __('portfolio.experience.esolution.points.p5') }}</li>
-                            <li>{{ __('portfolio.experience.esolution.points.p6') }}</li>
-                            <li>{{ __('portfolio.experience.esolution.points.p7') }}</li>
+                            <li><?php echo e(__('portfolio.experience.esolution.points.p1')); ?></li>
+                            <li><?php echo __('portfolio.experience.esolution.points.p2'); ?></li>
+                            <li><?php echo e(__('portfolio.experience.esolution.points.p3')); ?></li>
+                            <li><?php echo e(__('portfolio.experience.esolution.points.p4')); ?></li>
+                            <li><?php echo e(__('portfolio.experience.esolution.points.p5')); ?></li>
+                            <li><?php echo e(__('portfolio.experience.esolution.points.p6')); ?></li>
+                            <li><?php echo e(__('portfolio.experience.esolution.points.p7')); ?></li>
                         </ul>
 
                         <div class="tags small">
@@ -360,16 +364,16 @@
                     <div class="time-dot"></div>
                     <div class="time-content">
                         <div class="time-top">
-                            <h4>{{ __('portfolio.experience.rbc.company') }}</h4>
-                            <span class="pill">{{ __('portfolio.experience.rbc.period') }}</span>
+                            <h4><?php echo e(__('portfolio.experience.rbc.company')); ?></h4>
+                            <span class="pill"><?php echo e(__('portfolio.experience.rbc.period')); ?></span>
                         </div>
 
-                        <p class="muted"><b>{{ __('portfolio.experience.rbc.role') }}</b></p>
+                        <p class="muted"><b><?php echo e(__('portfolio.experience.rbc.role')); ?></b></p>
 
                         <ul class="list compact">
-                            <li>{{ __('portfolio.experience.rbc.points.p1') }}</li>
-                            <li>{{ __('portfolio.experience.rbc.points.p2') }}</li>
-                            <li>{{ __('portfolio.experience.rbc.points.p3') }}</li>
+                            <li><?php echo e(__('portfolio.experience.rbc.points.p1')); ?></li>
+                            <li><?php echo e(__('portfolio.experience.rbc.points.p2')); ?></li>
+                            <li><?php echo e(__('portfolio.experience.rbc.points.p3')); ?></li>
                         </ul>
 
                         <div class="tags small">
@@ -381,58 +385,58 @@
             </div>
         </section>
 
-        {{-- EDUCATION --}}
+        
         <section id="education" class="section">
             <div class="section-head reveal">
-                <h3>{{ __('portfolio.education.title') }}</h3>
-                <p>{{ __('portfolio.education.subtitle') }}</p>
+                <h3><?php echo e(__('portfolio.education.title')); ?></h3>
+                <p><?php echo e(__('portfolio.education.subtitle')); ?></p>
             </div>
 
             <div class="edu-grid">
                 <div class="edu-card reveal">
-                    <h4>{{ __('portfolio.education.master.title') }}</h4>
-                    <p class="muted">{{ __('portfolio.education.master.school') }}</p>
-                    <span class="pill">{{ __('portfolio.education.master.period') }}</span>
-                    <p class="tiny">{{ __('portfolio.education.master.mention') }}</p>
+                    <h4><?php echo e(__('portfolio.education.master.title')); ?></h4>
+                    <p class="muted"><?php echo e(__('portfolio.education.master.school')); ?></p>
+                    <span class="pill"><?php echo e(__('portfolio.education.master.period')); ?></span>
+                    <p class="tiny"><?php echo e(__('portfolio.education.master.mention')); ?></p>
                 </div>
 
                 <div class="edu-card reveal">
-                    <h4>{{ __('portfolio.education.licence.title') }}</h4>
-                    <p class="muted">{{ __('portfolio.education.licence.school') }}</p>
-                    <span class="pill">{{ __('portfolio.education.licence.period') }}</span>
-                    <p class="tiny">{{ __('portfolio.education.licence.mention') }}</p>
+                    <h4><?php echo e(__('portfolio.education.licence.title')); ?></h4>
+                    <p class="muted"><?php echo e(__('portfolio.education.licence.school')); ?></p>
+                    <span class="pill"><?php echo e(__('portfolio.education.licence.period')); ?></span>
+                    <p class="tiny"><?php echo e(__('portfolio.education.licence.mention')); ?></p>
                 </div>
 
                 <div class="edu-card reveal">
-                    <h4>{{ __('portfolio.education.bts.title') }}</h4>
-                    <p class="muted">{{ __('portfolio.education.bts.school') }}</p>
-                    <span class="pill">{{ __('portfolio.education.bts.period') }}</span>
-                    <p class="tiny">{{ __('portfolio.education.bts.mention') }}</p>
+                    <h4><?php echo e(__('portfolio.education.bts.title')); ?></h4>
+                    <p class="muted"><?php echo e(__('portfolio.education.bts.school')); ?></p>
+                    <span class="pill"><?php echo e(__('portfolio.education.bts.period')); ?></span>
+                    <p class="tiny"><?php echo e(__('portfolio.education.bts.mention')); ?></p>
                 </div>
             </div>
         </section>
 
-        {{-- CERTS --}}
+        
         <section id="certs" class="section">
             <div class="section-head reveal">
-                <h3>{{ __('portfolio.certs.title') }}</h3>
-                <p>{{ __('portfolio.certs.subtitle') }}</p>
+                <h3><?php echo e(__('portfolio.certs.title')); ?></h3>
+                <p><?php echo e(__('portfolio.certs.subtitle')); ?></p>
             </div>
 
             <div class="cards">
                 <article class="cert-card reveal">
                     <div class="cert-icon" aria-hidden="true">◎</div>
                     <div>
-                        <h4>{{ __('portfolio.certs.items.scrum.title') }}</h4>
-                        <p class="muted">{{ __('portfolio.certs.items.scrum.desc') }}</p>
+                        <h4><?php echo e(__('portfolio.certs.items.scrum.title')); ?></h4>
+                        <p class="muted"><?php echo e(__('portfolio.certs.items.scrum.desc')); ?></p>
                     </div>
                 </article>
 
                 <article class="cert-card reveal">
                     <div class="cert-icon">◎</div>
                     <div>
-                        <h4>{{ __('portfolio.certs.items.semrush.title') }}</h4>
-                        <p class="muted">{{ __('portfolio.certs.items.semrush.desc') }}</p>
+                        <h4><?php echo e(__('portfolio.certs.items.semrush.title')); ?></h4>
+                        <p class="muted"><?php echo e(__('portfolio.certs.items.semrush.desc')); ?></p>
                     </div>
                 </article>
 
@@ -442,8 +446,8 @@
         <!-- PROJECTS (placeholder) -->
         <section id="projects" class="section">
             <div class="section-head reveal">
-                <h3>{{ __('portfolio.projects.title') }}</h3>
-                <p>{{ __('portfolio.projects.subtitle') }}</p>
+                <h3><?php echo e(__('portfolio.projects.title')); ?></h3>
+                <p><?php echo e(__('portfolio.projects.subtitle')); ?></p>
             </div>
 
             <div class="project-grid">
@@ -454,14 +458,15 @@
                 </div>
 
                 <p class="muted">
-                    {{ __('portfolio.projects.dbmonitor.desc') }}
+                    <?php echo e(__('portfolio.projects.dbmonitor.desc')); ?>
+
                 </p>
 
                 <ul class="list compact">
-                    <li>{{ __('portfolio.projects.dbmonitor.f1') }}</li>
-                    <li>{{ __('portfolio.projects.dbmonitor.f2') }}</li>
-                    <li>{{ __('portfolio.projects.dbmonitor.f3') }}</li>
-                    <li>{{ __('portfolio.projects.dbmonitor.f4') }}</li>
+                    <li><?php echo e(__('portfolio.projects.dbmonitor.f1')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.dbmonitor.f2')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.dbmonitor.f3')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.dbmonitor.f4')); ?></li>
                 </ul>
 
                 <div class="project-actions">
@@ -488,14 +493,15 @@
                 </div>
 
                 <p class="muted">
-                    {{ __('portfolio.projects.coffeeshop.desc') }}
+                    <?php echo e(__('portfolio.projects.coffeeshop.desc')); ?>
+
                 </p>
 
                 <ul class="list compact">
-                    <li>{{ __('portfolio.projects.coffeeshop.f1') }}</li>
-                    <li>{{ __('portfolio.projects.coffeeshop.f2') }}</li>
-                    <li>{{ __('portfolio.projects.coffeeshop.f3') }}</li>
-                    <li>{{ __('portfolio.projects.coffeeshop.f4') }}</li>
+                    <li><?php echo e(__('portfolio.projects.coffeeshop.f1')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.coffeeshop.f2')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.coffeeshop.f3')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.coffeeshop.f4')); ?></li>
                 </ul>
 
                 <div class="project-actions">
@@ -506,8 +512,8 @@
 
                     <button type="button" class="btn small ghost" data-preview
                     data-title="Coffee Shop E-Commerce"
-                    data-images="{{ asset('images/projects/coffeeshop-1.svg') }}|{{ asset('images/projects/coffeeshop-2.svg') }}">
-                    {{ __('portfolio.projects.preview') }} <span aria-hidden="true">◐</span>
+                    data-images="<?php echo e(asset('images/projects/coffeeshop-1.svg')); ?>|<?php echo e(asset('images/projects/coffeeshop-2.svg')); ?>">
+                    <?php echo e(__('portfolio.projects.preview')); ?> <span aria-hidden="true">◐</span>
                     </button>
                 </div>
                 </article>
@@ -524,14 +530,15 @@
                 </div>
 
                 <p class="muted">
-                    {{ __('portfolio.projects.restaurant.desc') }}
+                    <?php echo e(__('portfolio.projects.restaurant.desc')); ?>
+
                 </p>
 
                 <ul class="list compact">
-                    <li>{{ __('portfolio.projects.restaurant.f1') }}</li>
-                    <li>{{ __('portfolio.projects.restaurant.f2') }}</li>
-                    <li>{{ __('portfolio.projects.restaurant.f3') }}</li>
-                    <li>{{ __('portfolio.projects.restaurant.f4') }}</li>
+                    <li><?php echo e(__('portfolio.projects.restaurant.f1')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.restaurant.f2')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.restaurant.f3')); ?></li>
+                    <li><?php echo e(__('portfolio.projects.restaurant.f4')); ?></li>
                 </ul>
 
                 <div class="project-actions">
@@ -542,8 +549,8 @@
 
                     <button type="button" class="btn small ghost" data-preview
                     data-title="Restaurant Management System"
-                    data-images="{{ asset('images/projects/restaurant-1.svg') }}|{{ asset('images/projects/restaurant-2.svg') }}">
-                    {{ __('portfolio.projects.preview') }} <span aria-hidden="true">◐</span>
+                    data-images="<?php echo e(asset('images/projects/restaurant-1.svg')); ?>|<?php echo e(asset('images/projects/restaurant-2.svg')); ?>">
+                    <?php echo e(__('portfolio.projects.preview')); ?> <span aria-hidden="true">◐</span>
                     </button>
                 </div>
                 </article>
@@ -553,22 +560,22 @@
         <!-- CONTACT -->
         <section id="contact" class="section">
             <div class="section-head reveal">
-                <h3>{{ __('portfolio.contact.title') }}</h3>
-                <p>{{ __('portfolio.contact.subtitle') }}</p>
+                <h3><?php echo e(__('portfolio.contact.title')); ?></h3>
+                <p><?php echo e(__('portfolio.contact.subtitle')); ?></p>
             </div>
 
             <div class="grid-2">
                 <div class="panel reveal">
-                    <h4>{{ __('portfolio.contact.details') }}</h4>
+                    <h4><?php echo e(__('portfolio.contact.details')); ?></h4>
 
                     <div class="contact-list">
                         <a class="contact-item" href="mailto:benjdiasaad97@gmail.com">
-                            <span class="k">{{ __('portfolio.contact.email') }}</span>
+                            <span class="k"><?php echo e(__('portfolio.contact.email')); ?></span>
                             <span class="v">benjdiasaad97@gmail.com</span>
                         </a>
 
                         <a class="contact-item" href="tel:+212620669912">
-                            <span class="k">{{ __('portfolio.contact.phone') }}</span>
+                            <span class="k"><?php echo e(__('portfolio.contact.phone')); ?></span>
                             <span class="v">+212 620 669 912</span>
                         </a>
 
@@ -584,35 +591,36 @@
                         </a>
 
                         <div class="contact-item">
-                            <span class="k">{{ __('portfolio.contact.address') }}</span>
-                            <span class="v">{{ __('portfolio.contact.city') }}</span>
+                            <span class="k"><?php echo e(__('portfolio.contact.address')); ?></span>
+                            <span class="v"><?php echo e(__('portfolio.contact.city')); ?></span>
                         </div>
                     </div>
                 </div>
 
-                <form class="panel reveal" id="contactForm" method="POST" action="{{ route('CONTACT') }}">
-                    @csrf
-                    <h4>{{ __('portfolio.contact.send_title') }}</h4>
+                <form class="panel reveal" id="contactForm" method="POST" action="<?php echo e(route('CONTACT')); ?>">
+                    <?php echo csrf_field(); ?>
+                    <h4><?php echo e(__('portfolio.contact.send_title')); ?></h4>
 
                     <label>
-                        <span>{{ __('portfolio.contact.name') }}</span>
-                        <input name="name" type="text" placeholder="{{ __('portfolio.contact.name_ph') }}" required />
+                        <span><?php echo e(__('portfolio.contact.name')); ?></span>
+                        <input name="name" type="text" placeholder="<?php echo e(__('portfolio.contact.name_ph')); ?>" required />
                     </label>
 
                     <label>
-                        <span>{{ __('portfolio.contact.email') }}</span>
-                        <input name="email" type="email" placeholder="{{ __('portfolio.contact.email_ph') }}"
+                        <span><?php echo e(__('portfolio.contact.email')); ?></span>
+                        <input name="email" type="email" placeholder="<?php echo e(__('portfolio.contact.email_ph')); ?>"
                             required />
                     </label>
 
                     <label>
-                        <span>{{ __('portfolio.contact.message') }}</span>
-                        <textarea name="message" rows="5" placeholder="{{ __('portfolio.contact.message_ph') }}"
+                        <span><?php echo e(__('portfolio.contact.message')); ?></span>
+                        <textarea name="message" rows="5" placeholder="<?php echo e(__('portfolio.contact.message_ph')); ?>"
                             required></textarea>
                     </label>
 
                     <button class="btn primary" type="submit" style="margin-top:10px;">
-                        {{ __('portfolio.contact.submit') }}
+                        <?php echo e(__('portfolio.contact.submit')); ?>
+
                     </button>
                 </form>
             </div>
@@ -624,7 +632,7 @@
     </main>
 
     <!-- Toast -->
-    <div id="toast" class="toast" data-msg="{{ __('portfolio.contact.toast') }}" role="status" aria-live="polite"
+    <div id="toast" class="toast" data-msg="<?php echo e(__('portfolio.contact.toast')); ?>" role="status" aria-live="polite"
         aria-atomic="true"></div>
 
     <!-- Project preview lightbox -->
@@ -645,7 +653,7 @@
     </div>
 
     <!-- Three.js (module) -->
-    <script type="module" src="{{ asset('assets/js/app.js') }}?v={{ config('app.version') }}"></script>
+    <script type="module" src="<?php echo e(asset('assets/js/app.js')); ?>?v=<?php echo e(config('app.version')); ?>"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -757,4 +765,4 @@
     </script>
 </body>
 
-</html>
+</html><?php /**PATH /Users/add/Documents/php/saadFolio/resources/views/home.blade.php ENDPATH**/ ?>

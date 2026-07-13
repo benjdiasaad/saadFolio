@@ -203,6 +203,67 @@ function showToast(msg){
   toastTimer = setTimeout(() => toast.classList.remove("show"), 1600);
 }
 
+// Project preview lightbox
+const lightbox = document.getElementById("lightbox");
+if (lightbox) {
+  const lbImg = document.getElementById("lightboxImg");
+  const lbTitle = document.getElementById("lightboxTitle");
+  const lbDots = document.getElementById("lightboxDots");
+  const lbPrev = lightbox.querySelector("[data-lb-prev]");
+  const lbNext = lightbox.querySelector("[data-lb-next]");
+  let images = [];
+  let index = 0;
+
+  function renderLb(){
+    lbImg.src = images[index];
+    Array.from(lbDots.children).forEach((d, i) => d.classList.toggle("active", i === index));
+    const many = images.length > 1;
+    lbPrev.hidden = !many;
+    lbNext.hidden = !many;
+  }
+  function go(delta){
+    index = (index + delta + images.length) % images.length;
+    renderLb();
+  }
+  function openLb(imgs, title){
+    images = imgs;
+    index = 0;
+    lbTitle.textContent = title || "";
+    lbDots.innerHTML = "";
+    imgs.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Go to image ${i + 1}`);
+      dot.addEventListener("click", () => { index = i; renderLb(); });
+      lbDots.appendChild(dot);
+    });
+    renderLb();
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+  function closeLb(){
+    lightbox.hidden = true;
+    lbImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll("[data-preview]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const imgs = (btn.dataset.images || "").split("|").map(s => s.trim()).filter(Boolean);
+      if (imgs.length) openLb(imgs, btn.dataset.title);
+    });
+  });
+  lightbox.querySelectorAll("[data-lb-close]").forEach(el => el.addEventListener("click", closeLb));
+  lbPrev.addEventListener("click", () => go(-1));
+  lbNext.addEventListener("click", () => go(1));
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.hidden) return;
+    if (e.key === "Escape") closeLb();
+    else if (e.key === "ArrowLeft") go(-1);
+    else if (e.key === "ArrowRight") go(1);
+  });
+}
+
 // Contact form -> mailto
 const form = document.getElementById("contactForm");
 form.addEventListener("submit", (e) => {
