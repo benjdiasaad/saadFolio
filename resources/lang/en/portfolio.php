@@ -90,6 +90,13 @@ return [
         'toast' => 'Your message has been received. I will get back to you soon.',
     ],
 
+    'footer' => [
+        'tagline' => 'Laravel & full-stack engineer building performant, robust web apps.',
+        'rights' => 'All rights reserved.',
+        'top' => 'Back to top',
+        'built' => 'Built with Laravel',
+    ],
+
     'skills' => [
         'title' => 'Skills',
         'backend' => [

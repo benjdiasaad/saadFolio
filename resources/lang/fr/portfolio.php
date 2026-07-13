@@ -92,6 +92,13 @@ return [
         'toast' => 'Votre message a bien été reçu. Je vous répondrai rapidement.',
     ],
 
+    'footer' => [
+        'tagline' => 'Ingénieur Laravel & full-stack, je conçois des applications web performantes et robustes.',
+        'rights' => 'Tous droits réservés.',
+        'top' => 'Haut de page',
+        'built' => 'Conçu avec Laravel',
+    ],
+
     'skills' => [
         'title' => 'Compétences',
         'backend' => [
